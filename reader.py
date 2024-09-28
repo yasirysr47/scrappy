@@ -25,7 +25,7 @@ class Reader:
             article.download()
             article.parse()
             file_name = self.get_name(url)
-            with open(file_name, "w+") as fp:
+            with open(file_name, "w+", encoding='utf-8') as fp:
                 fp.write(article.text)
 
             count += 1
