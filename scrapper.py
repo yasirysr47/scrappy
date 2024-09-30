@@ -7,10 +7,10 @@ from collections import deque
 class Crawl():
     def __init__(self, url, key_word) -> None:
         self.new_url = deque([(url, 0)])
-        self.all_url_log = open("all_url_log.txt", "w+")
+        self.all_url_log = open("all_url_log.txt", "w+", encoding='utf-8')
         self.processed_urls = set()
         self.key_word = key_word
-        self.final_urls = open("final_urls2.txt", "w+")
+        self.final_urls = open("final_urls2.txt", "w+", encoding='utf-8')
 
 
     def bfs_url_crawler(self):
