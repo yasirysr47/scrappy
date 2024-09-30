@@ -38,7 +38,7 @@ class Reader:
 
 
 if __name__ == "__main__":
-    fp = open("final_urls.txt", "r+")
+    fp = open("final_urls.txt", "r+", encoding='utf-8')
     key_word = "symptoms-causes"
     reader = Reader(fp, key_word)
     reader.start_url_crawler()
